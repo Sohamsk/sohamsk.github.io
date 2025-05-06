@@ -1,0 +1,86 @@
+/* Make sure html and body take up full height with no margin/padding */
+html, body {
+  background-color: #021526;
+  color: #E2E2B6;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto; /* Allow scrolling when necessary */
+}
+
+/* Container fills full height and uses column layout, with max-width */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* At minimum, fill the viewport height */
+  font-family: sans-serif;
+  max-width: 800px;   /* Maximum width set to 600px */
+  margin: 0 auto;     /* Centers the container horizontally */
+  padding: 1rem;      /* Optional padding around the container */
+  box-sizing: border-box; /* Include padding in height calculation */
+}
+
+/* Top and Bottom stay fixed size */
+.top {
+  padding: 1rem;
+  margin: 0;
+}
+
+/* Middle grows to fill all available space */
+.middle {
+  display: flex;
+  flex: 1;            /* Make middle section take all available space */
+  width: 100%;        /* Ensure the middle section is full width */
+}
+
+/* Left (nav) and Right (main) areas */
+.left {
+  padding: 1rem;
+  text-align: right;
+}
+
+@media only screen and (max-width: 1000px) {
+    .left {
+        font-size: 1.5rem;
+    }
+
+    .bottom {
+        font-size: 1.5rem;
+    }
+}
+
+.left a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.right a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+/* Reset list styles to remove default padding and margin */
+.left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.right {
+  flex: 1;
+  padding: 1rem;
+  overflow: auto;
+}
+
+/* Footer */
+.bottom {
+  padding: 1rem;
+  text-align: center;
+}
+
+
+.bottom a {
+  text-decoration: underline;
+  color: inherit;
+}
